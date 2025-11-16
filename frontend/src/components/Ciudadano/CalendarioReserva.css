@@ -1,0 +1,60 @@
+.calendario-reserva-container {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 0 16px;
+}
+
+.solicitud-panel {
+  margin-top: 24px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.solicitud-panel .form-group {
+  margin-bottom: 16px;
+}
+
+.solicitud-panel label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.solicitud-panel input,
+.solicitud-panel textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.solicitud-panel button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+.solicitud-panel button:hover {
+  background-color: #0056b3;
+}
+
+.error-text {
+  color: #e74c3c;
+  margin-top: 12px;
+}
+
+.success-text {
+  color: #28a745;
+  margin-top: 12px;
+}

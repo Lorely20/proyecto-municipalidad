@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f7;
+  color: #333333;
+}
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+h2 {
+  color: #2c3e50;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Responsive breakpoints (ejemplo simple) */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}

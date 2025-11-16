@@ -1,0 +1,46 @@
+/* Fondo de la página */
+.landing-page {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.landing-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%); /* ajustado de -50% a -48% para subir un poco */
+  background: rgba(0, 0, 0, 0.3); 
+  padding: 0.1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  max-width: 50vw;
+  max-height: 80vh;
+}
+
+.landing-logo-main {
+  max-width: 550px;              
+  width: 100%;
+  height: auto;
+  animation: fadeZoomIn 1.2s ease forwards; 
+}
+
+@keyframes fadeZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+

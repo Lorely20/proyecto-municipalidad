@@ -1,0 +1,39 @@
+.solicitudes-list-container {
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.solicitudes-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.solicitudes-table th,
+.solicitudes-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.solicitudes-table th {
+  background-color: #f0f0f0;
+}
+
+.btn‑approve {
+  padding: 6px 12px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.btn‑reject {
+  padding: 6px 12px;
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
