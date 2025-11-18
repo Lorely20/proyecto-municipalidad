@@ -1,0 +1,60 @@
+.horarios-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.horarios-container h2 {
+  font-size: 1.6rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.horarios-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.horario-btn {
+  padding: 12px 20px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  background: white;
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.horario-btn:hover {
+  background: #007bff;
+  color: white;
+}
+
+.horario-btn.seleccionado {
+  background: #007bff;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
+
+.boton-reserva {
+  background-color: #28a745;
+  color: #fff;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton-reserva:hover {
+  background-color: #218838;
+}

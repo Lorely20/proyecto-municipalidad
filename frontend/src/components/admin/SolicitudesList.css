@@ -1,4 +1,4 @@
-.solicitudes-list-container {
+.solicitudes-container {
   padding: 2rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -6,34 +6,58 @@
 .solicitudes-table {
   width: 100%;
   border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .solicitudes-table th,
 .solicitudes-table td {
-  padding: 12px;
-  border-bottom: 1px solid #ddd;
+  padding: 14px 18px;
+  border-bottom: 1px solid #eee;
   text-align: left;
 }
 
 .solicitudes-table th {
-  background-color: #f0f0f0;
+  background-color: #f2f2f2;
+  color: #333;
 }
 
-.btn‑approve {
-  padding: 6px 12px;
-  background-color: #27ae60;
+.solicitudes-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.btn-detalle {
+  padding: 8px 16px;
+  background-color: #3498db;
   color: white;
   border: none;
   border-radius: 4px;
-  margin-right: 6px;
+  font-weight: 500;
   cursor: pointer;
 }
 
-.btn‑reject {
+.btn-detalle:hover {
+  background-color: #2980b9;
+}
+
+.estado {
   padding: 6px 12px;
-  background-color: #c0392b;
-  color: white;
-  border: none;
   border-radius: 4px;
-  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: white;
+  text-transform: capitalize;
+}
+
+.estado.pendiente {
+  background-color: #f39c12;
+}
+
+.estado.aceptada {
+  background-color: #2ecc71;
+}
+
+.estado.rechazada {
+  background-color: #e74c3c;
 }

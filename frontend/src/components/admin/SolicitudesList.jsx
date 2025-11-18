@@ -1,11 +1,13 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { obtenerReservasAdmin, cambiarEstadoReserva } from '../../api/reservaApi';
+import { obtenerReservasAdmin } from '../../api/reservaApi';
 import { AuthContext } from '../../contexts/AuthContext';
+import { useNavigate } from 'react-router-dom';
 import './SolicitudesList.css';
 
 const SolicitudesList = () => {
   const { token } = useContext(AuthContext);
   const [solicitudes, setSolicitudes] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchSolicitudes = async () => {
@@ -15,25 +17,35 @@ const SolicitudesList = () => {
     fetchSolicitudes();
   }, [token]);
 
-  const actualizarEstado = async (id, estado) => {
-    await cambiarEstadoReserva(id, estado, token);
-    setSolicitudes(solicitudes.map(s => s._id === id ? { ...s, estado } : s));
+  const irADetalle = (id) => {
+    navigate(`/admin/solicitudes/${id}`);
   };
 
   return (
     <div className="solicitudes-container">
       <h2>Solicitudes de Reserva</h2>
-      <ul>
-        {solicitudes.map(s => (
-          <li key={s._id} className="solicitud-item">
-            <p><strong>Espacio:</strong> {s.espacio.nombre}</p>
-            <p><strong>Fecha:</strong> {s.fecha}</p>
-            <p><strong>Estado:</strong> {s.estado}</p>
-            <button onClick={() => actualizarEstado(s._id, 'aceptada')}>Aceptar</button>
-            <button onClick={() => actualizarEstado(s._id, 'rechazada')}>Rechazar</button>
-          </li>
-        ))}
-      </ul>
+      <table className="solicitudes-table">
+        <thead>
+          <tr>
+            <th>Espacio</th>
+            <th>Fecha</th>
+            <th>Estado</th>
+            <th>Ver Detalles</th>
+          </tr>
+        </thead>
+        <tbody>
+          {solicitudes.map(s => (
+            <tr key={s._id}>
+              <td>{s.espacio.nombre}</td>
+              <td>{new Date(s.fecha).toLocaleDateString()}</td>
+              <td>{s.estado}</td>
+              <td>
+                <button className="btn-detalle" onClick={() => irADetalle(s._id)}>Ver</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

@@ -26,10 +26,10 @@ export const obtenerReservasAdmin = async (token) => {
   return response.data;
 };
 
-export const cambiarEstadoReserva = async (id, estado, token) => {
+export const cambiarEstadoReserva = async (id, accion, token) => {
   const config = {
     headers: { Authorization: `Bearer ${token}` }
   };
-  const response = await axios.put(`${API_URL}/${id}`, { estado }, config);
+  const response = await axios.put(`${API_URL}/${id}`, { accion }, config);
   return response.data;
 };

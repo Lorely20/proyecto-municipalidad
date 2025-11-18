@@ -1,16 +1,16 @@
 .calendario-reserva-container {
-  max-width: 650px;
-  margin: 30px auto;
-  padding: 0 16px;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
 .solicitud-panel {
   margin-top: 24px;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
 }
 
 .solicitud-panel .form-group {

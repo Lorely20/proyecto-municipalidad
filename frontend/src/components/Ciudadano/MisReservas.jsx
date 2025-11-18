@@ -22,6 +22,28 @@ const MisReservas = () => {
     }
   }, [usuario]);
 
+  // 🔧 Formatear fecha sin desfasajes
+  const formatearFechaLocal = (fecha) => {
+    if (!fecha) return '';
+    try {
+      const f = typeof fecha === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(fecha)
+        ? new Date(`${fecha}T00:00:00`)
+        : new Date(fecha);
+
+      if (isNaN(f.getTime())) return 'Fecha inválida';
+      return f.toLocaleDateString('es-AR');
+    } catch {
+      return 'Fecha inválida';
+    }
+  };
+
+  // 🕒 Mostrar hora formateada
+  const formatearHora = (inicio, fin) => {
+    if (inicio && fin) return `${inicio} – ${fin}`;
+    if (inicio) return inicio;
+    return '—';
+  };
+
   return (
     <div className="mis‑reservas‑container">
       <h2>Mis Reservas</h2>
@@ -37,8 +59,8 @@ const MisReservas = () => {
         <tbody>
           {reservas.map(r => (
             <tr key={r._id}>
-              <td>{new Date(r.fecha).toLocaleDateString()}</td>
-              <td>{r.hora || '—'}</td>
+              <td>{formatearFechaLocal(r.fecha)}</td>
+              <td>{formatearHora(r.horaInicio, r.horaFin)}</td>
               <td>{r.espacio?.nombre}</td>
               <td>{r.estado.charAt(0).toUpperCase() + r.estado.slice(1)}</td>
             </tr>

@@ -1,12 +1,12 @@
 .espacio-list-container {
-  padding: 32px;
+  padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .espacio-list-title {
   font-size: 2rem;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   text-align: center;
   color: #2c3e50;
 }

@@ -12,8 +12,17 @@ const Login = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      await login({ correo, contraseña });
-      navigate('/espacios');
+      const user = await login({ correo, contraseña });
+
+      // 🔁 Redirección según el rol
+      if (user.rol === 'ciudadano') {
+        navigate('/espacios');
+      } else if (user.rol === 'encargado') {
+        navigate('/admin/solicitudes');
+      } else {
+        alert('Rol no reconocido');
+      }
+
     } catch (error) {
       alert('Error al iniciar sesión');
     }

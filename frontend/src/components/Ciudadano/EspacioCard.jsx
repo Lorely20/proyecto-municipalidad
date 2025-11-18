@@ -3,9 +3,17 @@ import { Link } from 'react-router-dom';
 import './EspacioCard.css';
 
 const EspacioCard = ({ espacio }) => {
+  const imagenPrincipal = espacio.imagenes && espacio.imagenes.length > 0 
+    ? espacio.imagenes[0].replace('/assets/', '') 
+    : 'default.jpg';
+
   return (
     <div className="espacio-card">
-      <img src={espacio.imagenUrl || '/default.jpg'} alt={espacio.nombre} className="espacio-card-img" />
+      <img 
+        src={`/assets/${imagenPrincipal}`} 
+        alt={espacio.nombre} 
+        className="espacio-card-img" 
+      />
       <div className="espacio-card-info">
         <h3>{espacio.nombre}</h3>
         <p>{espacio.descripcion}</p>

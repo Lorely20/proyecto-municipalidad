@@ -1,27 +1,44 @@
+:root {
+  --primary: #2c3e50;
+  --accent: #2980b9;
+  --accent-hover: #1f6392;
+  --bg: #f4f6f7;
+  --white: #ffffff;
+  --radius: 10px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
 body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f6f7;
-  color: #333333;
+  background-color: var(--bg);
+  color: var(--primary);
 }
 
-.container {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.card {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
 }
 
-h2 {
-  color: #2c3e50;
-}
-
-button {
+.btn {
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
-/* Responsive breakpoints (ejemplo simple) */
-@media (max-width: 768px) {
-  .container {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
+.btn:hover {
+  background-color: var(--accent-hover);
+  transform: scale(0.98);
+}
+
+.image-responsive {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
 }

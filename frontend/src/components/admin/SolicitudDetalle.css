@@ -1,43 +1,74 @@
-.solicitud‑detalle-container {
-  max-width: 600px;
+.detalle-container {
+  max-width: 650px;
   margin: 2rem auto;
-  padding: 1.5rem;
   background: #fff;
+  padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.solicitud‑detalle-container h2 {
+.detalle-container h2 {
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.detalle-container p {
   margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-
-.solicitud‑detalle-container p {
-  margin-bottom: 0.75rem;
-  color: #555;
-}
-
-.acciones‑detalle {
-  margin-top: 1.5rem;
-}
-
-.acciones‑detalle .btn‑approve,
-.acciones‑detalle .btn‑reject {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  margin-right: 10px;
   font-size: 1rem;
+  color: #444;
+}
+
+.acciones-detalle {
+  margin-top: 2rem;
+}
+
+.btn-approve,
+.btn-reject {
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
   cursor: pointer;
 }
 
-.acciones‑detalle .btn‑approve {
+.btn-approve {
   background-color: #27ae60;
   color: white;
 }
 
-.acciones‑detalle .btn‑reject {
+.btn-approve:hover {
+  background-color: #219150;
+}
+
+.btn-reject {
   background-color: #c0392b;
   color: white;
+}
+
+.btn-reject:hover {
+  background-color: #992d22;
+}
+
+.estado {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: white;
+  text-transform: capitalize;
+}
+
+.estado.pendiente {
+  background-color: #f39c12;
+}
+
+.estado.aceptada {
+  background-color: #2ecc71;
+}
+
+.estado.rechazada {
+  background-color: #e74c3c;
 }

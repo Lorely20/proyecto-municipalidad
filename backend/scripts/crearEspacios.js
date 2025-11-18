@@ -8,9 +8,9 @@ const espacios = [
     descripcion: 'Espacio para eventos sociales.',
     ubicacion: 'Zona 1',
     imagenes: [
-      '/assets/salon1.jpg',
-      '/assets/salon1_2.jpg',
-      '/assets/salon1_3.jpg'
+      'salon1.jpg',
+      'salon1_2.jpg',
+      'salon1_3.jpg'
     ],
     celularEncargado: '2222222',
     precioAlquiler: 500,
@@ -21,8 +21,8 @@ const espacios = [
     descripcion: 'Ideal para talleres.',
     ubicacion: 'Zona 2',
     imagenes: [
-      '/assets/salon2.jpg',
-      '/assets/salon2_2.jpg'
+      'salon2.jpg',
+      'salon2_2.jpg'
     ],
     celularEncargado: '2222222',
     precioAlquiler: 0,
@@ -33,8 +33,8 @@ const espacios = [
     descripcion: 'Espacio deportivo amplio.',
     ubicacion: 'Zona 3',
     imagenes: [
-      '/assets/estadio.jpg',
-      '/assets/estadio2.jpg'
+      'estadio.jpg',
+      'estadio2.jpg'
     ],
     celularEncargado: '2222222',
     precioAlquiler: 0,
